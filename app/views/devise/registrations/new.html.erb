@@ -1,21 +1,13 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   
-  <div><%= f.label :first_name %><br />
-      <%= f.text_field :first_name %></div>
-  
-  <div><%= f.label :last_name %><br />
-      <%= f.text_field :last_name %></div>
-  
-  <div><%= f.label :profile_name %><br />
-      <%= f.text_field :profile_name %></div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :profile_name %>
+  <%= f.input :email %>
+  <%= f.input :password %>
 
   <div class="field">
     <%= f.label :password %>
