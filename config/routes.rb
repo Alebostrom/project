@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :statuses
   root to: 'statuses#index'
   get 'flow', to: 'statuses#index', as: :flow
+  
+  get '/:id', to: 'profiles#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
