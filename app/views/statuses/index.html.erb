@@ -5,15 +5,22 @@
 
 <% @statuses.each do |e| %>
  <div class="status">
-  <strong><%= e.user.full_name %></strong>
-  <p><%= e.content %></p>
-   <div class="meta">
-    <%= link_to time_ago_in_words(e.created_at) + " ago", e %>
-    <span class="admin">
-      | <%= link_to "Edit Post", edit_status_path(e) %> |
-      <%= link_to "Delete Post", e, metod: :delete, data: {confirm: "Are you sure?"} %>
-    </span>
-   </div>
- </div>
+  <div class="row">
+    <div class="col-md-1">
+      <%= image_tag e.user.gravatar_url %>
+    </div>
+    <div class="col-md-7">
+    <strong><%= e.user.full_name %></strong>
+    <p><%= e.content %></p>
+     <div class="meta">
+      <%= link_to time_ago_in_words(e.created_at) + " ago", e %>
+      <span class="admin">
+        | <%= link_to "Edit Post", edit_status_path(e) %> |
+        <%= link_to "Delete Post", e, metod: :delete, data: {confirm: "Are you sure?"} %>
+       </span>
+       </div>
+       </div>
+    </div>
+  </div>
 <% end %>
 
