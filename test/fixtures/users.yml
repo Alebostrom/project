@@ -9,5 +9,10 @@ alexis:
     last_name: "bostrom"
     email: "alexis@hotmail.com"
     profile_name: "alexis"
-   
+    
+mello:
+    first_name: "Mello"
+    last_name: "Depou"
+    email: "mellodepou@hotmail.com"
+    profile_name: "Mellou_Depou"
    
