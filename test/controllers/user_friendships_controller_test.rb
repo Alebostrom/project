@@ -55,4 +55,29 @@ class UserFriendshipsControllerTest < ActionController::TestCase
     end
    end
   end
-end
+    
+    context "#create" do
+     context "not logged in" do
+        should "redirect to loggin page" do
+         get :new
+         assert_response :redirect
+         assert_redirected_to login_path
+      end
+    end
+     
+     context "when logged in" do
+      setup do
+       sign_in users(:alexander)
+      end
+      
+      context "with no friend_id" do
+        setup do
+         post :create
+       end
+        
+      should "set the error flash message" do
+       assert !flash[:error].empty?
+      end
+     end
+    end
+ end
