@@ -3,6 +3,7 @@ alexander:
     last_name: "bostrom"
     email: "alexander.bostrom97@hotmail.com"
     profile_name: "alle"
+    encrypted_password: $2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq
     
 alexis:
     first_name: "Alexis"
